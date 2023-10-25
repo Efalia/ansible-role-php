@@ -3,6 +3,8 @@
 # for RHEL/CentOS.
 php_enablerepo: ""
 
+gestionnaire_service: auto
+
 # Extra packages to install (in addition to distro-specific default lists).
 php_packages_extra: []
 
