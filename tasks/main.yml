@@ -20,6 +20,13 @@
     php_packages: "{{ __php_packages | list }}"
   when: php_packages is not defined
 
+- name: Ajuster php_packages pour OPcache (pour PHP >= 8.5, ne pas installer le paquet opcache)
+  set_fact:
+    php_packages: "{{ php_packages | reject('search','php' + php_version + '-opcache') | list }}"
+  when:
+    - php_packages is defined
+    - php_version is version('8.5', '>=')
+
 - name: Define php_webserver_daemon.
   set_fact:
     php_webserver_daemon: "{{ __php_webserver_daemon }}"
