@@ -31,6 +31,7 @@ expose_php = {{ php_expose_php }}
 
 max_execution_time = {{ php_max_execution_time }}
 max_input_time = {{ php_max_input_time }}
+max_input_nesting_level = {{ php_max_input_nesting_level }}
 max_input_vars = {{ php_max_input_vars }}
 memory_limit = {{ php_memory_limit }}
 
@@ -171,6 +172,7 @@ bcmath.scale = 0
 [Session]
 session.save_handler = {{ php_session_save_handler }}
 session.save_path = {{ php_session_save_path }}
+session.upload_progress.enabled = {{ php_session_upload_progress_enabled }}
 session.use_cookies = 1
 session.use_only_cookies = 1
 session.name = PHPSESSID

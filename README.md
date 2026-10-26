@@ -99,7 +99,8 @@ By default, all the extra defaults below are applied through the php.ini include
     php_memory_limit: "256M"
     php_max_execution_time: "60"
     php_max_input_time: "60"
-    php_max_input_vars: "1000"
+    php_max_input_nesting_level: "20"
+    php_max_input_vars: "100"
     php_realpath_cache_size: "32K"
     php_file_uploads: "On"
     php_upload_max_filesize: "64M"
@@ -120,6 +121,7 @@ By default, all the extra defaults below are applied through the php.ini include
     php_session_gc_maxlifetime: 1440
     php_session_save_handler: files
     php_session_save_path: ''
+    php_session_upload_progress_enabled: 0
     php_disable_functions: []
     php_precision: 14
     php_serialize_precision: "-1"
